@@ -1,1 +1,1 @@
-web: gunicorn run:my-great-weather-88
+web: node build/build.js
