@@ -1,5 +1,5 @@
 import requests
-#import os
+import os
 from flask import Flask, render_template
 
 #API_KEY = os.environ.get("API_KEY", "6cc0b26070b46dc183d2596c28caf9f6")
@@ -47,4 +47,5 @@ def page_not_found(error):
     return render_template('index.html', message=error), 404
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    port=int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
